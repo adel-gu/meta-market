@@ -1,6 +1,6 @@
 {
   "name": "@meta-market/mint-ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React component and the design system package for meta market application",
   "author": "Adel Guitoun <adeelguitoun@gmail.com>",
   "license": "MIT",
@@ -23,8 +23,9 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.esm.d.ts",
   "files": [
-    "dist", "README.md", "package.json"
+    "dist",
+    "README.md",
+    "package.json"
   ],
-  "scripts": {
-  }
+  "scripts": {}
 }
