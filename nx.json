@@ -71,6 +71,9 @@
       }
     }
   ],
+  "release": {
+    "projects": ["packages/*"]
+  },
   "targetDefaults": {
     "e2e-ci--**/*": {
       "dependsOn": ["^build"]
