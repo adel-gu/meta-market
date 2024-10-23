@@ -15,13 +15,13 @@
   "homepage": "https://github.com/adel-gu/meta-market/tree/main/packages/mint-ui#readme",
   "exports": {
     ".": {
-      "types": "",
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.esm.js"
     }
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.esm.d.ts",
   "files": [
     "dist", "README.md", "package.json"
   ],
