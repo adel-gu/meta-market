@@ -1,1 +1,1 @@
-export * from './lib/mint-ui';
+export * from './Button';
