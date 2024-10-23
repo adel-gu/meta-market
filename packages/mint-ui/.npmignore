@@ -1,0 +1,10 @@
+node_modules
+src
+public
+*.config.js
+*.ts
+*.tsconfig.json
+.storybook
+.vscode
+*.json
+.*
