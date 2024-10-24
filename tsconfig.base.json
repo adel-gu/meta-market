@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@meta-market/mint-ui": ["packages/mint-ui/src/index.ts"]
+      "@meta-market/mint-ui": ["packages/mint-ui/src/index.ts"],
+      "landing/Module": ["apps/landing/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
