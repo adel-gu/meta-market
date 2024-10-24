@@ -3,7 +3,7 @@ const url = require('@rollup/plugin-url');
 const svg = require('@svgr/rollup');
 
 const entry = "./src/index.ts"
-const outDir = "./dist"
+const outDir = "../../dist/packages/mint-ui"
 
 module.exports = withNx(
   {
