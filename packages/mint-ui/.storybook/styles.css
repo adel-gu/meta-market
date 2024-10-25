@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html.dark {
-    background-color: #101827;
-  }
+	html.dark {
+		background-color: #101827;
+	}
 }

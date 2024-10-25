@@ -83,7 +83,5 @@
       }
     }
   },
-  "implicitDependencies": [
-    "landing"
-  ]
+  "implicitDependencies": ["landing"]
 }
