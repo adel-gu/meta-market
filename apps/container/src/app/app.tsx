@@ -11,7 +11,7 @@ export function App() {
     <React.Suspense fallback={null}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className='text-red-500'>Home</Link>
         </li>
         <li>
           <Link to="/landing">Landing</Link>

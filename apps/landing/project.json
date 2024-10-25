@@ -17,7 +17,7 @@
         "main": "apps/landing/src/main.ts",
         "tsConfig": "apps/landing/tsconfig.app.json",
         "assets": ["apps/landing/src/favicon.ico", "apps/landing/src/assets"],
-        "styles": ["apps/landing/src/styles.tailwind"],
+        "styles": ["apps/landing/src/styles.css"],
         "scripts": [],
         "webpackConfig": "apps/landing/webpack.config.ts",
         "postcssConfig": "apps/landing/postcss.config.js"

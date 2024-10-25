@@ -20,7 +20,7 @@
           "apps/container/src/favicon.ico",
           "apps/container/src/assets"
         ],
-        "styles": ["apps/container/src/styles.tailwind"],
+        "styles": ["apps/container/src/styles.css"],
         "scripts": [],
         "webpackConfig": "apps/container/webpack.config.ts",
         "postcssConfig": "apps/container/postcss.config.js"
@@ -82,5 +82,8 @@
         }
       }
     }
-  }
+  },
+  "implicitDependencies": [
+    "landing"
+  ]
 }
