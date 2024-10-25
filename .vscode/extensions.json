@@ -3,6 +3,10 @@
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "ms-playwright.playwright",
-    "firsttris.vscode-jest-runner"
+    "firsttris.vscode-jest-runner",
+    "sonarsource.sonarlint-vscode",
+    "dbaeumer.vscode-eslint",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss"
   ]
 }

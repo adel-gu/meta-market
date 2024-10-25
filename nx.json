@@ -80,7 +80,7 @@
     },
     "build": {
       "cache": true,
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build", "typecheck"]
     },
     "@nx/webpack:webpack": {
       "inputs": [
