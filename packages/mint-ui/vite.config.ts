@@ -1,29 +1,29 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/mint-ui',
-  plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
-  define: {
-    'import.meta.vitest': undefined,
-  },
-  test: {
-    watch: false,
-    includeSource: ['src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    globals: true,
-    environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    reporters: ['default'],
-    coverage: {
-      reportsDirectory: '../../coverage/packages/mint-ui',
-      provider: 'v8',
-    },
-  },
+	root: __dirname,
+	cacheDir: '../../node_modules/.vite/packages/mint-ui',
+	plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
+	// Uncomment this if you are using workers.
+	// worker: {
+	//  plugins: [ nxViteTsPaths() ],
+	// },
+	define: {
+		'import.meta.vitest': undefined,
+	},
+	test: {
+		watch: false,
+		includeSource: ['src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+		globals: true,
+		environment: 'jsdom',
+		include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+		reporters: ['default'],
+		coverage: {
+			reportsDirectory: '../../coverage/packages/mint-ui',
+			provider: 'v8',
+		},
+	},
 });
