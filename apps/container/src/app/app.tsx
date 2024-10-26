@@ -23,7 +23,7 @@ export function App() {
 					<Link to='/market'>Market</Link>
 				</li>
 				<li>
-					<Link to='/profiles'>Profiles</Link>
+					<Link to='/profile'>Profiles</Link>
 				</li>
 				<li>
 					<Link to='/auth'>Auth</Link>
@@ -32,7 +32,7 @@ export function App() {
 			<Routes>
 				<Route path='/' element={<Landing />} />
 				<Route path='/market' element={<Market />} />
-				<Route path='/profiles' element={<Profiles />} />
+				<Route path='/profile/*' element={<Profiles />} />
 				<Route path='/auth/*' element={<Auth />} />
 			</Routes>
 		</React.Suspense>
