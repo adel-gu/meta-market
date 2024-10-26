@@ -4,6 +4,8 @@ import NxWelcome from './nx-welcome';
 
 import { Link, Route, Routes } from 'react-router-dom';
 
+const Auth = React.lazy(() => import('auth/Module'));
+
 const Landing = React.lazy(() => import('landing/Module'));
 
 export function App() {
@@ -16,11 +18,15 @@ export function App() {
 					</Link>
 				</li>
 				<li>
+					<Link to='/auth'>Auth</Link>
+				</li>
+				<li>
 					<Link to='/landing'>Landing</Link>
 				</li>
 			</ul>
 			<Routes>
 				<Route path='/' element={<NxWelcome title='container' />} />
+				<Route path='/auth' element={<Auth />} />
 				<Route path='/landing' element={<Landing />} />
 			</Routes>
 		</React.Suspense>
