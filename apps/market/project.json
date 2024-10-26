@@ -1,0 +1,83 @@
+{
+  "name": "market",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/market/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/market",
+        "index": "apps/market/src/index.html",
+        "baseHref": "/",
+        "main": "apps/market/src/main.ts",
+        "tsConfig": "apps/market/tsconfig.app.json",
+        "assets": ["apps/market/src/favicon.ico", "apps/market/src/assets"],
+        "styles": ["apps/market/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "apps/market/webpack.config.ts",
+        "postcssConfig": "apps/market/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/market/src/environments/environment.ts",
+              "with": "apps/market/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/market/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "market:build",
+        "hmr": true,
+        "port": 8004
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "market:build:development"
+        },
+        "production": {
+          "buildTarget": "market:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/react:module-federation-static-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "serveTarget": "market:serve"
+      },
+      "configurations": {
+        "development": {
+          "serveTarget": "market:serve:development"
+        },
+        "production": {
+          "serveTarget": "market:serve:production"
+        }
+      }
+    }
+  }
+}

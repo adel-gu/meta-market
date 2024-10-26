@@ -14,7 +14,7 @@ const config: ModuleFederationConfig = {
 	 * declare module 'my-external-remote';
 	 *
 	 */
-	remotes: ['landing', 'auth', 'profiles'],
+	remotes: ['landing', 'auth', 'profiles', 'market'],
 };
 
 export default config;
