@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import NxWelcome from './nx-welcome';
-
 import { Link, Route, Routes } from 'react-router-dom';
 
 const Market = React.lazy(() => import('market/Module'));
@@ -30,16 +28,12 @@ export function App() {
 				<li>
 					<Link to='/auth'>Auth</Link>
 				</li>
-				<li>
-					<Link to='/landing'>Landing</Link>
-				</li>
 			</ul>
 			<Routes>
-				<Route path='/' element={<NxWelcome title='container' />} />
+				<Route path='/' element={<Landing />} />
 				<Route path='/market' element={<Market />} />
 				<Route path='/profiles' element={<Profiles />} />
-				<Route path='/auth' element={<Auth />} />
-				<Route path='/landing' element={<Landing />} />
+				<Route path='/auth/*' element={<Auth />} />
 			</Routes>
 		</React.Suspense>
 	);
