@@ -31,8 +31,8 @@ export function App() {
 			</ul>
 			<Routes>
 				<Route path='/' element={<Landing />} />
-				<Route path='/market' element={<Market />} />
-				<Route path='/profile/*' element={<Profiles />} />
+				<Route path='/market/*' element={<Market />} />
+				<Route path='/profiles/*' element={<Profiles />} />
 				<Route path='/auth/*' element={<Auth />} />
 			</Routes>
 		</React.Suspense>
