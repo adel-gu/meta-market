@@ -17,7 +17,8 @@
     "paths": {
       "@meta-market/mint-ui": ["packages/mint-ui/src/index.ts"],
       "auth/Module": ["apps/auth/src/remote-entry.ts"],
-      "landing/Module": ["apps/landing/src/remote-entry.ts"]
+      "landing/Module": ["apps/landing/src/remote-entry.ts"],
+      "profiles/Module": ["apps/profiles/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
