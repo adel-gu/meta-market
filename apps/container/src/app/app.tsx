@@ -26,7 +26,12 @@ export function App() {
 					<Link to='/profile'>Profiles</Link>
 				</li>
 				<li>
-					<Link to='/auth'>Auth</Link>
+					<div>
+						<Link to='/auth/create-account'>Auth: Create account</Link>
+					</div>
+					<div>
+						<Link to='/auth/connect-wallet'>Auth: connect wallet</Link>
+					</div>
 				</li>
 			</ul>
 			<Routes>

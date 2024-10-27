@@ -8,8 +8,8 @@ const app = () => {
 			<div>Auth: auth application</div>
 
 			<Routes>
-					<Route path='/auth/create-account' element={<CreateAccount />}/>
-					<Route path='/auth/connect-wallet' element={<ConnectWallet />}/>
+					<Route path='/create-account' element={<CreateAccount />}/>
+					<Route path='/connect-wallet' element={<ConnectWallet />}/>
 			</Routes>
 		</>
 	)
