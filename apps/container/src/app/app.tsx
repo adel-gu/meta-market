@@ -20,7 +20,12 @@ export function App() {
 					</Link>
 				</li>
 				<li>
-					<Link to='/market'>Market</Link>
+					<div>
+						<Link to='/market/index'>Market: market</Link>
+					</div>
+					<div>
+						<Link to='/market/rankings'>Market: rankings</Link>
+					</div>
 				</li>
 				<li>
 					<Link to='/profile'>Profiles</Link>

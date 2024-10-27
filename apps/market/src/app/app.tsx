@@ -8,8 +8,8 @@ const app = () => {
 			<h1>Market: market application</h1>
 
 			<Routes>
-				<Route path='/market/index' element={<MarketPage />}/>
-				<Route path='/market/rankings/' element={<RankingsPage />}/>
+				<Route path='/index' element={<MarketPage />}/>
+				<Route path='/rankings' element={<RankingsPage />}/>
 			</Routes>
 		</div>
 	)
