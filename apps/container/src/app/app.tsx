@@ -28,7 +28,12 @@ export function App() {
 					</div>
 				</li>
 				<li>
-					<Link to='/profile'>Profiles</Link>
+					<div>
+						<Link to='/profiles/artist/5'>Profiles: artist</Link>
+					</div>
+					<div>
+						<Link to='/profiles/nft/5'>Profiles: nft</Link>
+					</div>
 				</li>
 				<li>
 					<div>

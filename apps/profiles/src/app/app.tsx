@@ -7,8 +7,8 @@ export function App() {
 		<div>
 			<h1>Profiles: profiles application</h1>
 			<Routes>
-				<Route path='/profiles/artist/:id' element={<ArtistPage />} />
-				<Route path='/profiles/nft/:id' element={<NFTPage />} />
+				<Route path='/artist/:id' element={<ArtistPage />} />
+				<Route path='/nft/:id' element={<NFTPage />} />
 			</Routes>
 		</div>
 	);
