@@ -5,26 +5,16 @@ import { ModuleFederationConfig } from '@nx/webpack';
 
 import baseConfig from './module-federation.config';
 
+const domain = process.env.PRODUCTION_DOMAIN
+
 const prodConfig: ModuleFederationConfig = {
 	...baseConfig,
-	/*
-	 * Remote overrides for production.
-	 * Each entry is a pair of a unique name and the URL where it is deployed.
-	 *
-	 * e.g.
-	 * remotes: [
-	 *   ['app1', 'http://app1.example.com'],
-	 *   ['app2', 'http://app2.example.com'],
-	 * ]
-	 *
-	 * You can also use a full path to the remoteEntry.js file if desired.
-	 *
-	 * remotes: [
-	 *   ['app1', 'http://example.com/path/to/app1/remoteEntry.js'],
-	 *   ['app2', 'http://example.com/path/to/app2/remoteEntry.js'],
-	 * ]
-	 */
-	remotes: [],
+	remotes: [
+		['auth', `${domain}/auth/latest/remoteEntry.js`],
+		['landing', `${domain}/landing/latest/remoteEntry.js`],
+		['market', `${domain}/market/latest/remoteEntry.js`],
+		['profiles', `${domain}/profiles/latest/remoteEntry.js`],
+	],
 };
 
 // Nx plugins for webpack to build config object from Nx options and context.
@@ -36,5 +26,5 @@ const prodConfig: ModuleFederationConfig = {
 export default composePlugins(
 	withNx(),
 	withReact(),
-	withModuleFederation(prodConfig, { dts: false })
+	withModuleFederation(prodConfig, { dts: false, getPublicPath: `function() {return /container/latest/}` })
 );

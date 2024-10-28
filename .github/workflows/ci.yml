@@ -46,7 +46,7 @@ jobs:
       - name: 🕵️ Lint affected projects
         run: npx nx affected -t lint
 
-      - name: 🧪 tests affected projects
+      - name: 🧪 Tests affected projects
         run: npx nx affected -t test
 
       - name: 🏗️ Build affected projects
