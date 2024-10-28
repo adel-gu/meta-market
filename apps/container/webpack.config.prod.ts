@@ -10,10 +10,10 @@ const domain = process.env.PRODUCTION_DOMAIN
 const prodConfig: ModuleFederationConfig = {
 	...baseConfig,
 	remotes: [
-		['auth', `${domain}/auth/latest/remoteEntry.js`],
-		['landing', `${domain}/landing/latest/remoteEntry.js`],
-		['market', `${domain}/market/latest/remoteEntry.js`],
-		['profiles', `${domain}/profiles/latest/remoteEntry.js`],
+		// ['auth', `${domain}/auth/latest/remoteEntry.js`],
+		// ['landing', `${domain}/landing/latest/remoteEntry.js`],
+		// ['market', `${domain}/market/latest/remoteEntry.js`],
+		// ['profiles', `${domain}/profiles/latest/remoteEntry.js`],
 	],
 };
 
@@ -26,5 +26,5 @@ const prodConfig: ModuleFederationConfig = {
 export default composePlugins(
 	withNx(),
 	withReact(),
-	withModuleFederation(prodConfig, { dts: false, getPublicPath: `function() {return /container/latest/}` })
+	withModuleFederation(prodConfig, { dts: false, getPublicPath: `function() {return "/container/latest/"}` })
 );
