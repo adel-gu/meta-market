@@ -82,6 +82,5 @@
         }
       }
     }
-  },
-  "implicitDependencies": ["landing", "auth", "market", "profiles"]
+  }
 }
