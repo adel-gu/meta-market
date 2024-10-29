@@ -26,12 +26,5 @@ const prodConfig: ModuleFederationConfig = {
 export default composePlugins(
 	withNx(),
 	withReact(),
-	withModuleFederation(prodConfig, { dts: false }),
-	(config) => {
-    config.output = {
-      ...config.output,
-      publicPath: "/container/latest/",
-    };
-    return config;
-  }
+	withModuleFederation(prodConfig, { dts: false })
 );

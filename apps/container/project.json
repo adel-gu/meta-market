@@ -45,8 +45,8 @@
           "namedChunks": false,
           "extractLicenses": true,
           "vendorChunk": false,
-          "webpackConfig": "apps/container/webpack.config.prod.ts",
-          "publicPath": "/container/latest/"
+          "deployUrl": "/container/latest/",
+          "webpackConfig": "apps/container/webpack.config.prod.ts"
         }
       }
     },
