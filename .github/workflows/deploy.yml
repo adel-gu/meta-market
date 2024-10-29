@@ -1,0 +1,54 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - run: npm ci --legacy-peer-deps
+      - uses: nrwl/nx-set-shas@v4
+
+      - name: 🏗️ Build affected projects
+        run: npx nx affected -t build
+
+      - name: ⚙️ Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1
+
+      - name: 🚀 Sync and Deploy Affected Projects
+        run: |
+          AFFECTED_APPS=$(npx nx show projects --affected --type=app)
+          AFFECTED_LIBS=$(npx nx show projects --affected --type=lib)
+
+          if [ -n "$AFFECTED_APPS" ]; then
+            for APP in $AFFECTED_APPS; do
+              echo "🚀🚀🚀 Deploying app '$APP' from dist/apps/$APP to S3..."
+              aws s3 sync dist/apps/$APP s3://${{ secrets.AWS_S3_BUCKET_NAME }}/$APP/latest --delete
+            done
+          fi
+
+          if [ -n "$AFFECTED_LIBS" ]; then
+            for LIB in $AFFECTED_LIBS; do
+              echo "🚀🚀🚀 Deploying library '$LIB' from dist/packages/$LIB to S3..."
+              aws s3 sync dist/packages/$LIB s3://${{ secrets.AWS_S3_BUCKET_NAME }}/$LIB/latest --delete
+            done
