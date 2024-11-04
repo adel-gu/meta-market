@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Link, Route, Routes } from 'react-router-dom';
 
-import { Button } from "@meta-market/mint-ui"
+import { Button } from '@meta-market/mint-ui';
 
 const Market = React.lazy(() => import('market/Module'));
 
@@ -11,7 +11,6 @@ const Profiles = React.lazy(() => import('profiles/Module'));
 const Auth = React.lazy(() => import('auth/Module'));
 
 const Landing = React.lazy(() => import('landing/Module'));
-
 
 export function App() {
 	return (
