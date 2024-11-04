@@ -5,7 +5,7 @@ import { ModuleFederationConfig } from '@nx/webpack';
 
 import baseConfig from './module-federation.config';
 
-const domain = process.env.PRODUCTION_DOMAIN
+// const domain = process.env.PRODUCTION_DOMAIN
 
 const prodConfig: ModuleFederationConfig = {
 	...baseConfig,
