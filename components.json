@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tailwind": {
+    "config": "packages/mint-ui/tailwind.config.js",
+    "css": "packages/mint-ui/src/global.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@meta-market/mint-ui",
+    "utils": "@meta-market/mint-ui"
+  }
+}
