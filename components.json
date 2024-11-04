@@ -3,7 +3,7 @@
   "style": "default",
   "rsc": false,
   "tailwind": {
-    "config": "packages/mint-ui/tailwind.config.js",
+    "config": "packages/mint-ui/tailwind.config.ts",
     "css": "packages/mint-ui/src/global.css",
     "baseColor": "neutral",
     "cssVariables": true

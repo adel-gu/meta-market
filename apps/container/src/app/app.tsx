@@ -15,7 +15,7 @@ const Landing = React.lazy(() => import('landing/Module'));
 export function App() {
 	return (
 		<React.Suspense fallback={null}>
-			<Button />
+			<Button>Hi there</Button>
 			<ul>
 				<li>
 					<Link to='/' className='text-red-500'>
