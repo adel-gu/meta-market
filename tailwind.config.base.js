@@ -16,22 +16,22 @@ module.exports = {
 		colors: {
 			'bg-primary': '#2b2b2b',
 			'bg-secondary': '#3b3b3b',
-			'caption-label-clr': '#858584',
-			'text-clr': '#fff',
-			cta: '#a259ff',
+			'foreground-primary': '#fff',
+			'foreground-secondary': '#858584',
+			primary: '#a259ff',
 		},
 		fontFamily: {
 			'space-mono': '"Space Mono", serif',
 			'work-sans': '"Work Sans", serif',
 		},
 		fontSize: {
-			sm: ['12px', { lineHeight: '19.2px' }],
-			base: ['16px', { lineHeight: '25.6px' }],
-			md: ['22px', { lineHeight: '35.2px' }],
-			lg: ['28px', { lineHeight: '44.8px' }],
-			xl: ['38px', { lineHeight: '60.8px' }],
-			'2xl': ['51px', { lineHeight: '81.6px' }],
-			'3xl': ['67px', { lineHeight: '107.2px' }],
+			sm: ['12px', { lineHeight: '19.2px' }], // caption
+			base: ['16px', { lineHeight: '25.6px' }], // base
+			md: ['22px', { lineHeight: '35.2px' }], // h5
+			lg: ['28px', { lineHeight: '44.8px' }], // h4
+			xl: ['38px', { lineHeight: '60.8px' }], // h3
+			'2xl': ['51px', { lineHeight: '81.6px' }], // h2
+			'3xl': ['67px', { lineHeight: '107.2px' }], // h1
 		},
 		extend: {
 			backgroundImage: {
