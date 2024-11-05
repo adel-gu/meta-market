@@ -35,7 +35,7 @@ const textVariants = cva('font-normal', {
 export interface TextProps
 	extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement>,
 		VariantProps<typeof textVariants> {
-	as: 'h1' | 'h2' | 'h3' | 'h4' | 'p';
+	as?: 'h1' | 'h2' | 'h3' | 'h4' | 'p';
 }
 
 const Text = React.forwardRef<
