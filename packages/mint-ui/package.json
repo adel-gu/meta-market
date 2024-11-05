@@ -27,5 +27,8 @@
     "README.md",
     "package.json"
   ],
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.1"
+  }
 }
