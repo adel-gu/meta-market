@@ -11,18 +11,24 @@ const textVariants = cva('font-normal', {
 		},
 		size: {
 			default: 'text-base',
-			sm: 'text-sm',
-			base: 'text-base',
-			md: 'text-md',
-			lg: 'text-lg',
-			xl: 'text-xl',
-			xxl: 'text-2xl',
-			xxxl: 'text-3xl',
+			'1': 'text-sm',
+			'2': 'text-base',
+			'3': 'text-md',
+			'4': 'text-lg',
+			'5': 'text-xl',
+			'6': 'text-2xl',
+			'7': 'text-3xl',
+		},
+		weight: {
+			default: 'font-normal',
+			semibold: 'font-semibold',
+			bold: 'font-bold',
 		},
 	},
 	defaultVariants: {
 		variant: 'default',
 		size: 'default',
+		weight: 'default',
 	},
 });
 
@@ -35,11 +41,11 @@ export interface TextProps
 const Text = React.forwardRef<
 	HTMLHeadingElement | HTMLParagraphElement,
 	TextProps
->(({ className, size, variant, as = 'p', ...props }, ref) => {
+>(({ className, variant, size, weight, as = 'p', ...props }, ref) => {
 	const Comp = as;
 	return (
 		<Comp
-			className={cn(textVariants({ size, variant, className }))}
+			className={cn(textVariants({ variant, size, weight, className }))}
 			ref={ref}
 			{...props}
 		/>
