@@ -2,7 +2,12 @@ import * as React from 'react';
 
 import { Link, Route, Routes } from 'react-router-dom';
 
-import { Button } from '@meta-market/mint-ui';
+import {
+	Button,
+	Avatar,
+	AvatarImage,
+	AvatarFallback,
+} from '@meta-market/mint-ui';
 
 const Market = React.lazy(() => import('market/Module'));
 
@@ -16,6 +21,10 @@ export function App() {
 	return (
 		<React.Suspense fallback={null}>
 			<Button>Get Started</Button>
+			<Avatar>
+				<AvatarImage src='' alt='shadcn' />
+				<AvatarFallback>CN</AvatarFallback>
+			</Avatar>
 			<ul>
 				<li>
 					<Link to='/' className='text-red-500'>
