@@ -4,4 +4,5 @@ export * from './AspectRatio';
 export * from './Avatar';
 export * from './Button';
 export * from './Image';
+export * from './Skeleton';
 export * from './Text';
