@@ -22,6 +22,7 @@ const meta: Meta<typeof Text> = {
 			control: { type: 'inline-radio' },
 		},
 	},
+	tags: ['autodocs'],
 };
 export default meta;
 
@@ -31,7 +32,7 @@ export const Heading: Story = {
 	args: {
 		as: 'h1',
 		children: 'Heading',
-		size: '7',
+		size: '1',
 	},
 };
 
@@ -39,7 +40,7 @@ export const Paragraph: Story = {
 	args: {
 		as: 'p',
 		children: 'This is a paragraph text.',
-		size: '2',
+		size: '6',
 	},
 };
 
@@ -48,6 +49,6 @@ export const Caption: Story = {
 		as: 'p',
 		children: 'This is a caption text.',
 		variant: 'caption',
-		size: '1',
+		size: '6',
 	},
 };
