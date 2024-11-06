@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lazy-load-image-loaded {
+	height: 100%;
+}

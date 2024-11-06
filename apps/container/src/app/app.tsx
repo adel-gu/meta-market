@@ -7,6 +7,7 @@ import {
 	Avatar,
 	AvatarImage,
 	AvatarFallback,
+	Image,
 } from '@meta-market/mint-ui';
 
 const Market = React.lazy(() => import('market/Module'));
@@ -21,6 +22,14 @@ export function App() {
 	return (
 		<React.Suspense fallback={null}>
 			<Button>Get Started</Button>
+			<Image
+				src='https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80'
+				placeholderSrc='https://images.freeimages.com/images/large-previews/f94/fluffy-gray-kitten-relaxing-0410-5697578.jpg?fmt=webp&h=20'
+				alt='img'
+				height={400}
+				width={400}
+				effect='blur'
+			/>
 			<Avatar>
 				<AvatarImage src='' alt='shadcn' />
 				<AvatarFallback>CN</AvatarFallback>

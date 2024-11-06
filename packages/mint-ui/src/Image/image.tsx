@@ -11,17 +11,17 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 import { cn } from '../cn';
 
-const imageVariants = cva('');
+const imageVariants = cva('inline h-full w-full bg-center object-cover');
 
 export interface ImageProps
 	extends LazyLoadImageProps,
 		VariantProps<typeof imageVariants> {}
 
-const Image = React.forwardRef<HTMLSpanElement, ImageProps>(
-	({ className, ...props }, ref) => (
-		<span ref={ref} className={cn(imageVariants())}>
-			<LazyLoadImage className={cn(className)} {...props} />
-		</span>
+const Image = React.forwardRef<HTMLDivElement, ImageProps>(
+	({ className, width, height, ...props }, ref) => (
+		<div ref={ref} className={cn(className)} style={{ width, height }}>
+			<LazyLoadImage className={cn(imageVariants({ className }))} {...props} />
+		</div>
 	)
 );
 
