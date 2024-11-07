@@ -10,6 +10,12 @@ const meta: Meta<typeof Avatar> = {
 			<AvatarFallback>Shadcn</AvatarFallback>
 		</Avatar>
 	),
+	argTypes: {
+		size: {
+			options: ['default', 'sm'],
+			control: 'inline-radio',
+		},
+	},
 	parameters: {
 		layout: 'centered',
 	},
@@ -32,6 +38,16 @@ export const AvatarWithFallBack: Story = {
 	args: {},
 	render: () => (
 		<Avatar>
+			<AvatarImage src='' alt='shadcn' />
+			<AvatarFallback>CN</AvatarFallback>
+		</Avatar>
+	),
+};
+
+export const AvatarSm: Story = {
+	args: {},
+	render: () => (
+		<Avatar size='sm'>
 			<AvatarImage src='' alt='shadcn' />
 			<AvatarFallback>CN</AvatarFallback>
 		</Avatar>
