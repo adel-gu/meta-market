@@ -25,7 +25,9 @@ describe('Text component', () => {
 		const textElement = screen.getByText('Customized Text');
 		expect(textElement).toHaveClass(
 			'text-foreground-secondary',
-			'text-lg',
+			'text-base',
+			'tablet:text-md',
+			'desktop:text-lg',
 			'font-bold'
 		);
 	});
@@ -45,7 +47,13 @@ describe('Text component', () => {
 	it('applies correct classes for size options', () => {
 		render(<Text size='7'>Large Text</Text>);
 		const textElement = screen.getByText('Large Text');
-		expect(textElement).toHaveClass('text-3xl');
+		expect(textElement).toHaveClass(
+			'text-foreground-primary',
+			'text-sm',
+			'tablet:text-base',
+			'desktop:text-md',
+			'font-normal'
+		);
 	});
 
 	it('applies correct classes for weight options', () => {
