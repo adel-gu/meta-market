@@ -40,7 +40,7 @@ jobs:
 
           if [[ "$AFFECTED_LIBS" == *"mint-icon"* ]]; then
             echo "Generating icons for 'mint-icon'..."
-            npm run build:icons
+            npx nx run mint-icons:build:icons
           fi
 
           npx nx affected -t build
