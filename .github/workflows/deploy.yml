@@ -35,7 +35,15 @@ jobs:
         run: npx nx affected -t test
 
       - name: 🏗️ Build affected projects
-        run: npx nx affected -t build
+        run: |
+          AFFECTED_LIBS=$(npx nx show projects --affected --type=lib)
+
+          if [[ "$AFFECTED_LIBS" == *"mint-icon"* ]]; then
+            echo "Generating icons for 'mint-icon'..."
+            npm run build:icons
+          fi
+
+          npx nx affected -t build
 
       - name: ⚙️ Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
