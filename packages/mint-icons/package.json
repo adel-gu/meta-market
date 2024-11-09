@@ -8,5 +8,11 @@
     }
   },
   "main": "./index.js",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "scripts": {
+    "build:icons": "svgr assets"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0"
+  }
 }
