@@ -1,1 +1,1 @@
-export * from './lib/mint-icons';
+export * from './icons';
