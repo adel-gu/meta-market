@@ -6,6 +6,9 @@
 
 @layer base {
 	body {
-		@apply font-work-sans;
+		@apply font-work-sans bg-bg-primary text-foreground-primary;
+	}
+	.active {
+		@apply text-primary;
 	}
 }
