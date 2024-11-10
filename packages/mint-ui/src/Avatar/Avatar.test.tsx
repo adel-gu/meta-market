@@ -1,6 +1,5 @@
-import React, { forwardRef, Ref, RefObject } from 'react';
-import * as AvatarPrimitive from '@radix-ui/react-avatar';
-import { render, screen, waitFor } from '@testing-library/react';
+import React, { forwardRef, Ref } from 'react';
+import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
 import { Avatar, AvatarFallback, AvatarImage } from './avatar';
