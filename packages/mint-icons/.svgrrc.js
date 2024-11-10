@@ -1,7 +1,7 @@
 module.exports = {
-	icon: 24,
 	typescript: true,
 	ref: true,
-	svgProps: { className: '' },
+	dimensions: false,
+	svgProps: { className: '', width: 24 },
 	outDir: 'src/icons',
 };
