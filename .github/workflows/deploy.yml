@@ -34,6 +34,13 @@ jobs:
       - name: 🧪 Tests affected projects
         run: npx nx affected -t test
 
+      - name: 🪄 Generating icons
+        run: |
+          if npx nx show projects --affected | grep -q "mint-icon"; then
+            echo "Generating icons for 'mint-icon'..."
+            (cd packages/mint-icons && npm install && npx nx run mint-icons:build:icons)
+          fi
+
       - name: 🏗️ Build affected projects
         run: npx nx affected -t build
 
