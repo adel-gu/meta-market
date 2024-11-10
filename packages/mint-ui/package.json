@@ -28,10 +28,5 @@
     "package.json"
   ],
   "scripts": {},
-  "dependencies": {
-    "@radix-ui/react-aspect-ratio": "^1.1.0",
-    "@radix-ui/react-avatar": "^1.1.1",
-    "@radix-ui/react-separator": "^1.1.0",
-    "@radix-ui/react-tabs": "^1.1.1"
-  }
+  "dependencies": {}
 }
