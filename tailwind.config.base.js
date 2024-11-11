@@ -4,9 +4,15 @@ module.exports = {
 		container: {
 			center: true,
 			padding: {
-				DEFAULT: '1.875rem',
-				tablet: '4.5rem',
-				desktop: '7.188rem',
+				DEFAULT: '1.5rem',
+			},
+			screens: {
+				sm: '600px',
+				md: '850px',
+				lg: '984px',
+				xl: '1240px',
+				'2xl': '1496px',
+				'3xl': '1600px',
 			},
 		},
 		screens: {
