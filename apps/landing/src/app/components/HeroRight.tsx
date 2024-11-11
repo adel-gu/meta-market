@@ -35,7 +35,7 @@ const HeroRight = () => {
 					</div>
 				</Skeleton>
 			) : (
-				<Card className='desktop:w-[80%] desktop:ml-auto'>
+				<Card className='desktop:w-[95%] desktop:ml-auto'>
 					<CardImage>
 						<Image src={HeroCardImg} alt='NFT' width={'100%'} effect='blur' />
 					</CardImage>
