@@ -22,9 +22,10 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: npm ci --legacy-peer-deps
+      - run: |
+          npm ci --legacy-peer-depss
+          (cd packages/mint-icons && npm install)
       - uses: nrwl/nx-set-shas@v4
-
       - name: 💅 Format affected projects
         run: npx nx affected -t format:check
 
@@ -33,13 +34,6 @@ jobs:
 
       - name: 🧪 Tests affected projects
         run: npx nx affected -t test
-
-      - name: 🪄 Generating icons
-        run: |
-          if npx nx show projects --affected | grep -q "mint-icon"; then
-            echo "Generating icons for 'mint-icon'..."
-            (cd packages/mint-icons && npm install && npx nx run mint-icons:build:icons)
-          fi
 
       - name: 🏗️ Build affected projects
         run: npx nx affected -t build
