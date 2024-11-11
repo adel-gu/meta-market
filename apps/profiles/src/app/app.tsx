@@ -1,4 +1,4 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ArtistPage from './Pages/ArtistPage';
 import NFTPage from './Pages/NFTPage';
 
