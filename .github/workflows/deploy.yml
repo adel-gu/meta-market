@@ -23,7 +23,7 @@ jobs:
           cache: 'npm'
 
       - run: |
-          npm ci --legacy-peer-depss
+          npm ci --legacy-peer-deps
           (cd packages/mint-icons && npm install)
       - uses: nrwl/nx-set-shas@v4
       - name: 💅 Format affected projects
