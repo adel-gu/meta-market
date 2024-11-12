@@ -1,4 +1,5 @@
 import CollectionSection from '../components/CollectionSection';
+import CreatorsSection from '../components/CreatorsSection';
 import HeroSection from '../components/HeroSection';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
 		<div>
 			<HeroSection />
 			<CollectionSection />
+			<CreatorsSection />
 		</div>
 	);
 };
