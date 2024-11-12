@@ -44,6 +44,9 @@ module.exports = {
 				'gradient-1': 'linear-gradient(-68deg, #a259ff 0%, #ff6250 100%)',
 				'gradient-2': 'linear-gradient(-36deg, #a259ff 0%, #377df7 100%)',
 			},
+			borderRadius: {
+				large: '1.25rem',
+			},
 		},
 	},
 };
