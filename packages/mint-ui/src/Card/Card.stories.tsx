@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { PaintBrush } from '@meta-market/mint-icons';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '../Avatar';
@@ -179,6 +180,33 @@ export const CreatorCard: Story = {
 							</Text>
 						</span>
 					</CardDescription>
+				</CardHeader>
+			</Card>
+		);
+	},
+};
+
+export const CategoryCard: Story = {
+	args: {},
+	render: () => {
+		return (
+			<Card className='overflow-hidden bg-bg-secondary'>
+				<CardContent className='relative overflow-hidden p-0 desktop:w-full'>
+					<CardImage
+						className='flex h-[140px] items-center justify-center bg-cover bg-center desktop:h-[240px]'
+						style={{
+							backgroundImage: `url(https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80)`,
+							filter: 'blur(15px)',
+						}}
+					/>
+					<PaintBrush className='absolute left-1/2 top-1/2 w-20 -translate-x-1/2 -translate-y-1/2 desktop:w-28' />
+				</CardContent>
+				<CardHeader className='mx-auto mt-0 space-y-0'>
+					<CardTitle>
+						<Text as='p' size='5' weight='semibold'>
+							Title
+						</Text>
+					</CardTitle>
 				</CardHeader>
 			</Card>
 		);
