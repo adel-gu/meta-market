@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '../Avatar';
+import { Badge } from '../Badge/badge';
 import { Grid } from '../Grid/grid';
 import { Image } from '../Image/image';
 import { Skeleton } from '../Skeleton';
 import { Text } from '../Text/text';
 import {
 	Card,
+	CardContent,
 	CardDescription,
 	CardFooter,
 	CardHeader,
@@ -136,6 +138,46 @@ export const CollectionCard: Story = {
 							<AvatarFallback>AV</AvatarFallback>
 						</Avatar>
 						<Text>Avatar</Text>
+					</CardDescription>
+				</CardHeader>
+			</Card>
+		);
+	},
+};
+
+export const CreatorCard: Story = {
+	args: {},
+	render: () => {
+		return (
+			<Card
+				className={`flex items-center space-x-4 bg-bg-secondary p-5 desktop:flex-col desktop:space-x-0 desktop:space-y-8`}>
+				<CardContent className='relative p-0 desktop:w-full'>
+					<Badge className='absolute -left-2 -top-2 z-50 desktop:relative desktop:left-0 desktop:top-0'>
+						2
+					</Badge>
+					<Avatar className='desktop:mx-auto'>
+						<AvatarImage
+							src="'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80'"
+							alt='avatar'
+						/>
+						<AvatarFallback>AV</AvatarFallback>
+					</Avatar>
+				</CardContent>
+				<CardHeader className='mx-auto mt-0 space-y-0 desktop:text-center'>
+					<CardTitle>
+						<Text as='p' size='5' weight='semibold'>
+							Title
+						</Text>
+					</CardTitle>
+					<CardDescription>
+						<span className='flex items-center space-x-4'>
+							<Text as='p' variant='caption'>
+								Total Sale:
+							</Text>
+							<Text as='p' className='font-space-mono'>
+								34.45 ETH
+							</Text>
+						</span>
 					</CardDescription>
 				</CardHeader>
 			</Card>
