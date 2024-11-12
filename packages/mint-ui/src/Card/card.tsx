@@ -9,7 +9,7 @@ const Card = React.forwardRef<
 	<div
 		ref={ref}
 		className={cn(
-			'rounded-[20px] bg-bg-secondary text-foreground-primary',
+			'rounded-large bg-bg-secondary text-foreground-primary',
 			className
 		)}
 		{...props}
@@ -59,7 +59,7 @@ const CardImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<div
 		ref={ref}
-		className={cn('w-full overflow-hidden rounded-t-[20px]', className)}
+		className={cn('w-full overflow-hidden rounded-t-large', className)}
 		{...props}
 	/>
 ));
