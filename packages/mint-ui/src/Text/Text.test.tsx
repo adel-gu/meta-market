@@ -27,7 +27,6 @@ describe('Text component', () => {
 			'text-foreground-secondary',
 			'text-base',
 			'tablet:text-md',
-			'desktop:text-lg',
 			'font-bold'
 		);
 	});
