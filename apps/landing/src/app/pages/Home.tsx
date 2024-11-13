@@ -1,3 +1,4 @@
+import AuctionSection from '../components/AuctionSection';
 import CategoriesSection from '../components/CategoriesSection';
 import CollectionSection from '../components/CollectionSection';
 import CreatorsSection from '../components/CreatorsSection';
@@ -12,6 +13,7 @@ const Home = () => {
 			<CreatorsSection />
 			<CategoriesSection />
 			<DiscoverNftsSection />
+			<AuctionSection />
 		</div>
 	);
 };
