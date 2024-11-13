@@ -190,7 +190,7 @@ export const CategoryCard: Story = {
 	args: {},
 	render: () => {
 		return (
-			<Card className='overflow-hidden bg-bg-secondary'>
+			<Card className='w-[350px] overflow-hidden bg-bg-secondary'>
 				<CardContent className='relative overflow-hidden p-0 desktop:w-full'>
 					<CardImage
 						className='flex h-[140px] items-center justify-center bg-cover bg-center desktop:h-[240px]'
@@ -208,6 +208,59 @@ export const CategoryCard: Story = {
 						</Text>
 					</CardTitle>
 				</CardHeader>
+			</Card>
+		);
+	},
+};
+
+export const DiscoverNftCard: Story = {
+	args: {},
+	render: () => {
+		return (
+			<Card className={`w-[350px] bg-bg-secondary`}>
+				<CardImage>
+					<Image
+						src='https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80'
+						alt='NFT'
+						width={'100%'}
+						effect='blur'
+					/>
+				</CardImage>
+				<CardHeader className='mt-0 space-y-0'>
+					<CardTitle>
+						<Text as='p' size='5' weight='semibold'>
+							Title
+						</Text>
+					</CardTitle>
+					<CardDescription className='flex items-center gap-3'>
+						<Avatar size='sm'>
+							<AvatarImage
+								src='https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80'
+								alt='avatar'
+							/>
+							<AvatarFallback>AV</AvatarFallback>
+						</Avatar>
+						<Text>Avatar name</Text>
+					</CardDescription>
+				</CardHeader>
+				<CardContent className='flex items-center justify-between'>
+					<div>
+						<Text as='p' variant='caption'>
+							Price
+						</Text>
+						<Text as='p' className='font-space-mono'>
+							1.63 ETH
+						</Text>
+					</div>
+					<div className='text-right'>
+						<Text as='p' variant='caption'>
+							Highest Bid
+						</Text>
+						<Text as='p' className='font-space-mono'>
+							0.33 ETH
+						</Text>
+					</div>
+				</CardContent>
 			</Card>
 		);
 	},
