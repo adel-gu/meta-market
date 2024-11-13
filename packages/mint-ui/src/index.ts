@@ -13,3 +13,4 @@ export * from './Separator';
 export * from './Skeleton';
 export * from './Tabs';
 export * from './Text';
+export * from './Timer';
