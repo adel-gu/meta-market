@@ -11,6 +11,8 @@ const buttonVariants = cva(
 			variant: {
 				default:
 					'bg-primary text-foreground-primary hover:bg-primary/90 focus:ring-primary',
+				white:
+					'bg-foreground-primary text-bg-primary hover:bg-foreground-primary/90 focus:ring-foreground-primary',
 				outline:
 					'border-2 border-primary text-primary hover:bg-primary/10 focus:ring-primary',
 				transparent: 'rounded-lg focus:bg-bg-secondary focus:ring-primary',
