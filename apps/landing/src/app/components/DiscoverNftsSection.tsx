@@ -16,7 +16,7 @@ import {
 	Image,
 	CardFooter,
 } from '@meta-market/mint-ui';
-import { RocketLaunch } from '@meta-market/mint-icons';
+import { Eye } from '@meta-market/mint-icons';
 
 import Avatar1 from '../../assets/avatar1.png';
 import Avatar2 from '../../assets/avatar2.png';
@@ -63,10 +63,10 @@ const DiscoverNftsSection = () => {
 					</Text>
 					<Text className='desktop:text-md'>Explore new trending NFTs</Text>
 				</div>
-				<Button variant='outline' asChild className='space-x-3'>
+				<Button variant='outline' asChild className='space-x-4'>
 					<Link to='/market/index'>
 						<span className='text-primary'>
-							<RocketLaunch />
+							<Eye />
 						</span>
 						<span className='text-foreground-primary'>See All</span>
 					</Link>
