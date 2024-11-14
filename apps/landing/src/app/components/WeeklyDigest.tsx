@@ -36,7 +36,11 @@ const WeeklyDigest = () => {
 				<div className='flex-1 flex flex-col justify-center tablet:px-16 desktop:px-28'>
 					<CardHeader className='mt-0 space-y-0 p-0 py-6'>
 						<CardTitle>
-							<Text as='p' size='3' weight='semibold'>
+							<Text
+								as='p'
+								size='2'
+								weight='semibold'
+								className='leading-tight tablet:leading-none desktop:leading-none'>
 								Join our weekly digest
 							</Text>
 						</CardTitle>
@@ -54,7 +58,6 @@ const WeeklyDigest = () => {
 						/>
 						<Button className='flex items-center gap-3 w-full' type='submit'>
 							<EnvelopeSimple />
-
 							<span>Subscribe</span>
 						</Button>
 					</CardFooter>
