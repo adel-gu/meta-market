@@ -4,6 +4,7 @@ import CollectionSection from '../components/CollectionSection';
 import CreatorsSection from '../components/CreatorsSection';
 import DiscoverNftsSection from '../components/DiscoverNftsSection';
 import HeroSection from '../components/HeroSection';
+import HowItWorks from '../components/HowItWorks';
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 			<CategoriesSection />
 			<DiscoverNftsSection />
 			<AuctionSection />
+			<HowItWorks />
 		</div>
 	);
 };
