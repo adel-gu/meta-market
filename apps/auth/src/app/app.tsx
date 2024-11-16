@@ -1,17 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import CreateAccount from './pages/CreateAccount';
 import ConnectWallet from './pages/ConnectWallet';
+import Layout from './layouts/Layout';
 
 const app = () => {
 	return (
-		<>
-			<div>Auth: auth application</div>
-
-			<Routes>
+		<Routes>
+			<Route element={<Layout />}>
 				<Route path='/create-account' element={<CreateAccount />} />
 				<Route path='/connect-wallet' element={<ConnectWallet />} />
-			</Routes>
-		</>
+			</Route>
+		</Routes>
 	);
 };
 export default app;
