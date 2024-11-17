@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../cn';
 
 const buttonVariants = cva(
-	'inline-flex items-center justify-center whitespace-nowrap rounded-[20px] transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] hover:cursor-pointer focus:z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg-primary disabled:pointer-events-none disabled:opacity-50',
+	'inline-flex items-center justify-center whitespace-nowrap rounded-large transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] hover:cursor-pointer focus:z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg-primary disabled:pointer-events-none disabled:opacity-50',
 	{
 		variants: {
 			variant: {
@@ -22,6 +22,7 @@ const buttonVariants = cva(
 				default: 'px-10 py-4 text-base font-semibold',
 				sm: 'px-8 py-3 text-base font-semibold',
 				lg: 'px-12 py-5 text-md font-semibold',
+				icon: 'px-4 py-3',
 			},
 		},
 		defaultVariants: {
