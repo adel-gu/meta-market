@@ -1,6 +1,13 @@
+import NftBackground from '../../assets/nft-background.png';
+import MoreFromArtist from '../components/MoreFromArtist';
+import NftBio from '../components/NftBio';
+
 const NFTPage = () => {
-  return (
-    <div>NFTPage</div>
-  )
-}
-export default NFTPage
+	return (
+		<>
+			<NftBio />
+			<MoreFromArtist />
+		</>
+	);
+};
+export default NFTPage;
