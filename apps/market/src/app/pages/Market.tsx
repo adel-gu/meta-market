@@ -1,6 +1,12 @@
+import NftsTabsSection from '../components/NftsTabsSection';
+import SearchSection from '../components/SearchSection';
+
 const MarketPage = () => {
-  return (
-    <div>MarketPage</div>
-  )
-}
-export default MarketPage
+	return (
+		<div>
+			<SearchSection />
+			<NftsTabsSection />
+		</div>
+	);
+};
+export default MarketPage;
