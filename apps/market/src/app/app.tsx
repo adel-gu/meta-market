@@ -4,14 +4,10 @@ import RankingsPage from './pages/Rankings';
 
 const app = () => {
 	return (
-		<div>
-			<h1>Market: market application</h1>
-
-			<Routes>
-				<Route path='/index' element={<MarketPage />}/>
-				<Route path='/rankings' element={<RankingsPage />}/>
-			</Routes>
-		</div>
-	)
-}
-export default app
+		<Routes>
+			<Route path='/index' element={<MarketPage />} />
+			<Route path='/rankings' element={<RankingsPage />} />
+		</Routes>
+	);
+};
+export default app;
