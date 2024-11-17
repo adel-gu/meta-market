@@ -121,39 +121,43 @@ const CreatorsSection = () => {
 					gap='lg'
 					className='grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4'>
 					{creators.map((creator, index) => (
-						<Card
-							key={creator.id}
-							className={`p-5 bg-bg-secondary flex items-center space-x-4 desktop:flex-col desktop:space-y-8 desktop:space-x-0
-              ${index === 5 ? 'hidden tablet:flex' : ''}
-              ${index >= 6 ? 'hidden desktop:flex' : ''}
-            `}>
-							<CardContent className='relative desktop:w-full p-0'>
-								<Badge className='absolute z-50 -top-2 -left-2 desktop:relative desktop:top-0 desktop:left-0'>
-									{index + 1}
-								</Badge>
-								<Avatar className='desktop:mx-auto'>
-									<AvatarImage src={creator.avatar} alt={creator.name} />
-									<AvatarFallback>{creator.name}</AvatarFallback>
-								</Avatar>
-							</CardContent>
-							<CardHeader className='mt-0 desktop:text-center mx-auto space-y-0'>
-								<CardTitle>
-									<Text as='p' size='5' weight='semibold'>
-										{creator.name}
-									</Text>
-								</CardTitle>
-								<CardDescription>
-									<span className='flex items-center space-x-4'>
-										<Text as='p' variant='caption'>
-											Total Sale:
+						<Link
+							to={`/profiles/artist/${creator.id}`}
+							className='hover:scale-105 transition-all'>
+							<Card
+								key={creator.id}
+								className={`p-5 bg-bg-secondary flex items-center space-x-4 desktop:flex-col desktop:space-y-8 desktop:space-x-0
+								${index === 5 ? 'hidden tablet:flex' : ''}
+								${index >= 6 ? 'hidden desktop:flex' : ''}
+							`}>
+								<CardContent className='relative desktop:w-full p-0'>
+									<Badge className='absolute z-50 -top-2 -left-2 desktop:relative desktop:top-0 desktop:left-0'>
+										{index + 1}
+									</Badge>
+									<Avatar className='desktop:mx-auto'>
+										<AvatarImage src={creator.avatar} alt={creator.name} />
+										<AvatarFallback>{creator.name}</AvatarFallback>
+									</Avatar>
+								</CardContent>
+								<CardHeader className='mt-0 desktop:text-center mx-auto space-y-0'>
+									<CardTitle>
+										<Text as='p' size='5' weight='semibold'>
+											{creator.name}
 										</Text>
-										<Text as='p' className='font-space-mono'>
-											34.45 ETH
-										</Text>
-									</span>
-								</CardDescription>
-							</CardHeader>
-						</Card>
+									</CardTitle>
+									<CardDescription>
+										<span className='flex items-center space-x-4'>
+											<Text as='p' variant='caption'>
+												Total Sale:
+											</Text>
+											<Text as='p' className='font-space-mono'>
+												34.45 ETH
+											</Text>
+										</span>
+									</CardDescription>
+								</CardHeader>
+							</Card>
+						</Link>
 					))}
 				</Grid>
 			</div>
