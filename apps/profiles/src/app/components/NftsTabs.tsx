@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import {
 	Tabs,
 	TabsList,
@@ -232,51 +234,55 @@ const NftsTabs = () => {
 							gap='lg'
 							className='grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3'>
 							{nfts.map((nft, index) => (
-								<Card key={nft.id} className='bg-bg-primary'>
-									<CardImage>
-										<Image
-											src={nft.nft}
-											alt='NFT'
-											width={'100%'}
-											effect='blur'
-										/>
-									</CardImage>
-									<CardHeader className='mt-0 space-y-0'>
-										<CardTitle>
-											<Text as='p' size='5' weight='semibold'>
-												{nft.title}
-											</Text>
-										</CardTitle>
-										<CardDescription className='flex items-center gap-3'>
-											<Avatar size='sm'>
-												<AvatarImage
-													src={creator?.avatar}
-													alt={creator?.avatarTitle}
-												/>
-												<AvatarFallback>{creator?.avatarTitle}</AvatarFallback>
-											</Avatar>
-											<Text>{creator?.avatarTitle}</Text>
-										</CardDescription>
-									</CardHeader>
-									<CardContent className='flex items-center justify-between'>
-										<div>
-											<Text as='p' variant='caption'>
-												Price
-											</Text>
-											<Text as='p' className='font-space-mono'>
-												1.63 ETH
-											</Text>
-										</div>
-										<div className='text-right'>
-											<Text as='p' variant='caption'>
-												Highest Bid
-											</Text>
-											<Text as='p' className='font-space-mono'>
-												0.33 ETH
-											</Text>
-										</div>
-									</CardContent>
-								</Card>
+								<Link to={`/profiles/nft/${nft.id}`} className='group'>
+									<Card key={nft.id} className='bg-bg-primary'>
+										<CardImage className='group-hover:scale-105 transition-all group-hover:rounded-b-large'>
+											<Image
+												src={nft.nft}
+												alt='NFT'
+												width={'100%'}
+												effect='blur'
+											/>
+										</CardImage>
+										<CardHeader className='mt-0 space-y-0'>
+											<CardTitle>
+												<Text as='p' size='5' weight='semibold'>
+													{nft.title}
+												</Text>
+											</CardTitle>
+											<CardDescription className='flex items-center gap-3'>
+												<Avatar size='sm'>
+													<AvatarImage
+														src={creator?.avatar}
+														alt={creator?.avatarTitle}
+													/>
+													<AvatarFallback>
+														{creator?.avatarTitle}
+													</AvatarFallback>
+												</Avatar>
+												<Text>{creator?.avatarTitle}</Text>
+											</CardDescription>
+										</CardHeader>
+										<CardContent className='flex items-center justify-between'>
+											<div>
+												<Text as='p' variant='caption'>
+													Price
+												</Text>
+												<Text as='p' className='font-space-mono'>
+													1.63 ETH
+												</Text>
+											</div>
+											<div className='text-right'>
+												<Text as='p' variant='caption'>
+													Highest Bid
+												</Text>
+												<Text as='p' className='font-space-mono'>
+													0.33 ETH
+												</Text>
+											</div>
+										</CardContent>
+									</Card>
+								</Link>
 							))}
 						</Grid>
 					</TabsContent>
