@@ -1,102 +1,180 @@
-# MetaMarket
+<a name="readme-top"></a>
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+<div align="center">
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+  <img src="packages/mint-icons/assets/logo.svg" alt="logo" width="140"  height="auto" />
+  <br/>
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+  <h2><b>Meta Market</b></h2>
 
-## Run tasks
+</div>
 
-To run the dev server for your app, use:
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🏛️ Project Structure](#project-structure)
+  - [🏗️ Key Technologies and Features](#built-with)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+
+- [🙏 Acknowledgements](#acknowledgements)
+
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Meta Market <a name="about-project"></a>
+
+**Meta Market** is a NFT marketplace built using a monorepo architecture, leveraging React and microfrontend design principles. The application is divided into five independent React applications, each serving a distinct function within the ecosystem, along with shared design system and icons packages. This microfrontend architecture ensures modularity, scalability, and independent deployment, while the monorepo setup allows for seamless code sharing and consistency across all projects.
+
+## 🏛️ Project Structure <a name="project-structure"></a>
+
+The project consists of the following microfrontends and packages:
+
+> <h3>Microfrontends</h3>
+
+1. **Container** (Host Application)
+
+   Acts as the entry point for the entire system.
+   Responsible for orchestrating and rendering the other microfrontend applications.
+   Utilizes BrowserRouter for managing global routing.
+   Ensures decoupling by loading microfrontends using dynamic imports.
+
+2. **Auth** (Authentication Application)
+
+   Handles user signup, login, and authentication flow.
+   Manages secure user sessions and access tokens.
+   Provides OAuth integrations for third-party logins (e.g., Google, GitHub).
+   Uses MemoryRouter for isolated routing within the microfrontend.
+
+3. **Landing** (Marketing Application)
+
+   Focuses on the home page and marketing content.
+   Includes features such as introductory sections, calls to action, and promotional material.
+   Aims to attract new users with information on the platform’s features and benefits.
+
+4. **Market** (NFT Marketplace Application)
+
+   Core application for browsing NFTs, collections, and artist rankings.
+   Supports advanced filtering, sorting, and searching of NFTs.
+   Displays trending collections and top-ranked artists.
+   Integrates with a blockchain backend for fetching NFT data and listings.
+
+5. **Profiles** (User Profiles Application)
+
+   Dedicated to artist profiles and individual NFT details.
+   Showcases artist information, social links, and their collections.
+   Provides detailed pages for each NFT, including descriptions, ownership history, and purchase options.
+
+> <h3>Packages</h3>
+
+1. **mint-ui** (Design system and UI library)
+
+   A React component library for the design system and UI components.
+   Ensures a consistent look and feel across all microfrontends.
+   Built with Tailwind CSS and React to provide reusable components.
+
+2. **mint-icons** (Icons library)
+
+   A library providing a set of SVG icons for use across all applications.
+   Designed to integrate seamlessly with the mint-ui components.
+
+## 🏗️ Key Technologies and Features <a name="built-with"></a>
+
+- **React & TypeScript:** For type safety and a modern development experience.
+- **Tailwind CSS:** For a consistent, responsive design.
+- **Webpack Module Federation:** Enables dynamic loading of microfrontend modules.
+- **Monorepo Architecture:** Simplifies code sharing and dependency management.
+- **Shared Component Libraries:** Ensures design consistency and speeds up development.
+
+<!-- Features -->
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Link to deployed project.
+
+- [Live Demo Link](https://d1zer73e5vmia3.cloudfront.net/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Setup
+
+Clone this repository to your desired folder:
+
+Example commands:
 
 ```sh
-npx nx serve container
+  cd my-folder
+  git clone git@github.com:adel-gu/meta-market.git
 ```
 
-To create a production bundle:
+### Install
+
+Install this project with:
+
+Example command:
 
 ```sh
-npx nx build container
+  cd meta-market
+  npm install --legacy-peer-deps
 ```
 
-To see all available targets to run for a project, run:
+### Usage
+
+To run the project, execute the following command:
+
+Example command:
+
+- To Run the whole application
 
 ```sh
-npx nx show project container
+  npx nx serve container
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
+- To run a specific application (auth application for example):
 
 ```sh
-npx nx g @nx/react:app demo
+  npx nx serve auth
 ```
 
-To generate a new library, use:
+### Run tests
+
+To run tests, run the following command:
 
 ```sh
-npx nx g @nx/react:lib mylib
+  npx nx run mint-ui:test
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+<!-- ACKNOWLEDGEMENTS -->
 
-## Set up CI!
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-### Step 1
+- Figma design by [Anima](https://www.figma.com/@anima).
+- The project setup using [Nx](https://nx.dev/) tool.
 
-To connect to Nx Cloud, run the following command:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```sh
-npx nx connect
-```
+<!-- LICENSE -->
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+## 📝 License <a name="license"></a>
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+This project is [MIT](./LICENSE) licensed.
 
-### Step 2
-
-Use the following command to configure a CI workflow for your workspace:
-
-```sh
-npx nx g ci-workflow
-```
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
