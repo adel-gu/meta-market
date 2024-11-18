@@ -1,6 +1,12 @@
+import CreatorsTable from '../components/CreatorsTable';
+import TopCreators from '../components/TopCreators';
+
 const RankingsPage = () => {
-  return (
-    <div>RankingsPage</div>
-  )
-}
-export default RankingsPage
+	return (
+		<>
+			<TopCreators />
+			<CreatorsTable />
+		</>
+	);
+};
+export default RankingsPage;
