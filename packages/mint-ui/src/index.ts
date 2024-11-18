@@ -11,6 +11,7 @@ export * from './Input';
 export * from './Navbar';
 export * from './Separator';
 export * from './Skeleton';
+export * from './Table';
 export * from './Tabs';
 export * from './Text';
 export * from './Timer';
