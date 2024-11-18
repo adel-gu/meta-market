@@ -25,6 +25,7 @@ module.exports = {
 			'foreground-primary': '#fff',
 			'foreground-secondary': '#858584',
 			primary: '#a259ff',
+			green: '#00ac4f',
 		},
 		fontFamily: {
 			'space-mono': '"Space Mono", serif',
