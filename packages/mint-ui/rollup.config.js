@@ -12,7 +12,7 @@ module.exports = withNx(
 		tsConfig: './tsconfig.lib.json',
 		compiler: 'tsc',
 		external: ['react', 'react-dom', 'react/jsx-runtime'],
-		format: ['esm'],
+		format: ['esm', 'cjs'],
 		assets: [{ input: '.', output: '.', glob: 'README.md' }],
 		project: './package.json',
 		extractCss: 'base.css',
