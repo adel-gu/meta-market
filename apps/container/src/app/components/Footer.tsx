@@ -5,8 +5,8 @@ import {
 	Logo,
 	TwitterLogo,
 	YoutubeLogo,
-} from '@meta-market-org/mint-icons';
-import { Button, Input, Separator, Text } from '@meta-market-org/mint-ui';
+} from '@meta-market-nft/mint-icons';
+import { Button, Input, Separator, Text } from '@meta-market-nft/mint-ui';
 import { Link } from 'react-router-dom';
 
 const links = [

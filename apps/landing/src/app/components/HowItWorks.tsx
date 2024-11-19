@@ -14,13 +14,13 @@ import {
 	CardImage,
 	Image,
 	CardFooter,
-} from '@meta-market-org/mint-ui';
+} from '@meta-market-nft/mint-ui';
 
 import {
 	WalletSetup,
 	EarningSetup,
 	CollectionSetup,
-} from '@meta-market-org/mint-icons';
+} from '@meta-market-nft/mint-icons';
 
 const cards = [
 	{

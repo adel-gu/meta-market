@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Logo, Menu } from '@meta-market-org/mint-icons';
+import { Logo, Menu } from '@meta-market-nft/mint-icons';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '../Button';

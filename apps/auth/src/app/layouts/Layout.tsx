@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Image } from '@meta-market-org/mint-ui';
+import { Image } from '@meta-market-nft/mint-ui';
 
 import Background from '../../assets/background.png';
 

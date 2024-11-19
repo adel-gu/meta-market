@@ -4,7 +4,7 @@ import {
 	AvatarImage,
 	Button,
 	Text,
-} from '@meta-market-org/mint-ui';
+} from '@meta-market-nft/mint-ui';
 import {
 	DiscordLogo,
 	InstagramLogo,
@@ -13,7 +13,7 @@ import {
 	Plus,
 	Copy,
 	Globe,
-} from '@meta-market-org/mint-icons';
+} from '@meta-market-nft/mint-icons';
 
 import Creator from '../../assets/creator.png';
 import Creator1 from '../../assets/creator1.png';

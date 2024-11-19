@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { PaintBrush } from '@meta-market-org/mint-icons';
+import { PaintBrush } from '@meta-market-nft/mint-icons';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '../Avatar';

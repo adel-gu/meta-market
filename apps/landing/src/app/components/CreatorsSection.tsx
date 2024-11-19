@@ -12,8 +12,8 @@ import {
 	CardTitle,
 	CardDescription,
 	CardContent,
-} from '@meta-market-org/mint-ui';
-import { RocketLaunch } from '@meta-market-org/mint-icons';
+} from '@meta-market-nft/mint-ui';
+import { RocketLaunch } from '@meta-market-nft/mint-icons';
 
 import Creator from '../../assets/creator.png';
 import Creator1 from '../../assets/creator1.png';

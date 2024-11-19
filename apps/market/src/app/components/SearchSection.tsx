@@ -1,5 +1,5 @@
-import { Button, Input, Text } from '@meta-market-org/mint-ui';
-import { MagnifyingGlass } from '@meta-market-org/mint-icons';
+import { Button, Input, Text } from '@meta-market-nft/mint-ui';
+import { MagnifyingGlass } from '@meta-market-nft/mint-icons';
 const SearchSection = () => {
 	return (
 		<section className='container py-10 tablet:py-20 space-y-6'>

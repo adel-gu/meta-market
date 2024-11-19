@@ -10,12 +10,12 @@ import {
 	TimerContent,
 	TimerValue,
 	TimerUnit,
-} from '@meta-market-org/mint-ui';
+} from '@meta-market-nft/mint-ui';
 
 import AuctionBgImage from '../../assets/auction-bg-image.png';
 import Shroomie from '../../assets/shroomie.png';
 import { Link } from 'react-router-dom';
-import { Eye } from '@meta-market-org/mint-icons';
+import { Eye } from '@meta-market-nft/mint-icons';
 
 const AuctionSection = () => {
 	return (

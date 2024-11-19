@@ -40,7 +40,7 @@
 
 ## 🚀 NPM <a name="live-demo"></a>
 
-- [Home Link](https://www.npmjs.com/package/@meta-market-org/mint-ui)
+- [Home Link](https://www.npmjs.com/package/@meta-market-nft/mint-ui)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

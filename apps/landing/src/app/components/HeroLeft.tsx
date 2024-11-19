@@ -1,5 +1,5 @@
-import { Button, Text } from '@meta-market-org/mint-ui';
-import { RocketLaunch } from '@meta-market-org/mint-icons';
+import { Button, Text } from '@meta-market-nft/mint-ui';
+import { RocketLaunch } from '@meta-market-nft/mint-icons';
 
 const HeroLeft = () => {
 	return (

@@ -1,5 +1,5 @@
-import { Text, Button } from '@meta-market-org/mint-ui';
-import { Metamask, Coinbase, WalletConnect } from '@meta-market-org/mint-icons';
+import { Text, Button } from '@meta-market-nft/mint-ui';
+import { Metamask, Coinbase, WalletConnect } from '@meta-market-nft/mint-icons';
 
 const ConnectWallet = () => {
 	return (

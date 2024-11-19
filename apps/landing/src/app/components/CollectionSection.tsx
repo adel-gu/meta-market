@@ -10,7 +10,7 @@ import {
 	AvatarFallback,
 	Image,
 	AspectRatio,
-} from '@meta-market-org/mint-ui';
+} from '@meta-market-nft/mint-ui';
 
 import MrFox from '../../assets/mrFox.png';
 import LargeCollection from '../../assets/dcgn-large.png';

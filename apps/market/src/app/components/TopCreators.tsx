@@ -1,4 +1,4 @@
-import { Text } from '@meta-market-org/mint-ui';
+import { Text } from '@meta-market-nft/mint-ui';
 
 const TopCreators = () => {
 	return (
