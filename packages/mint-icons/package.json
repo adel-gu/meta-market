@@ -1,6 +1,6 @@
 {
   "name": "@meta-market-nft/mint-icons",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "exports": {
     ".": {
       "import": "./index.mjs",
