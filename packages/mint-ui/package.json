@@ -15,16 +15,16 @@
   "author": "Adel Guitoun <adeelguitoun@gmail.com>",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "types": "./dist/packages/mint-ui/src/index.d.ts",
+      "import": "./dist/packages/mint-ui/index.esm.js",
+      "require": "./dist/packages/mint-ui/index.cjs.js"
     }
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/packages/mint-ui/index.cjs.js",
+  "module": "dist/packages/mint-ui/index.esm.js",
+  "types": "dist/packages/mint-ui/src/index.d.ts",
   "files": [
-    "dist"
+    "dist/packages/mint-ui"
   ],
   "scripts": {},
   "dependencies": {}
