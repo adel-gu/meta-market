@@ -1,11 +1,11 @@
-import { Logo, Menu } from '@meta-market/mint-icons';
+import { Logo, Menu } from '@meta-market-org/mint-icons';
 import {
 	Button,
 	NavBar as NavBarComponent,
 	NavBrand,
 	NavCollapse,
 	NavToggle,
-} from '@meta-market/mint-ui';
+} from '@meta-market-org/mint-ui';
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 

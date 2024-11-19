@@ -15,8 +15,8 @@ import {
 	Image,
 	CardFooter,
 	Input,
-} from '@meta-market/mint-ui';
-import { EnvelopeSimple } from '@meta-market/mint-icons';
+} from '@meta-market-org/mint-ui';
+import { EnvelopeSimple } from '@meta-market-org/mint-icons';
 
 import WeeklyDigestAsset from '../../assets/weekly-digest.png';
 

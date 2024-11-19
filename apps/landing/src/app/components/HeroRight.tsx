@@ -11,7 +11,7 @@ import {
 	Image,
 	Skeleton,
 	Text,
-} from '@meta-market/mint-ui';
+} from '@meta-market-org/mint-ui';
 import HeroCardImg from '../../assets/heroCardImg.png';
 import HeroCardAvatarImg from '../../assets/animaKid.png';
 

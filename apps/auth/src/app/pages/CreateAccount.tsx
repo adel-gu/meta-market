@@ -1,4 +1,4 @@
-import { Text, Input, Button } from '@meta-market/mint-ui';
+import { Text, Input, Button } from '@meta-market-org/mint-ui';
 
 const CreateAccount = () => {
 	return (

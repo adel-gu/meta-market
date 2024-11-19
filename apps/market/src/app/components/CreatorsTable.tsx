@@ -14,7 +14,7 @@ import {
 	TabsList,
 	TabsTrigger,
 	Text,
-} from '@meta-market/mint-ui';
+} from '@meta-market-org/mint-ui';
 
 import Creator from '../../assets/creator.png';
 import Creator1 from '../../assets/creator1.png';

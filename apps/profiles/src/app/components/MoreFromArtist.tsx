@@ -15,8 +15,8 @@ import {
 	CardImage,
 	Image,
 	CardFooter,
-} from '@meta-market/mint-ui';
-import { ArrowRight } from '@meta-market/mint-icons';
+} from '@meta-market-org/mint-ui';
+import { ArrowRight } from '@meta-market-org/mint-icons';
 
 import Creator from '../../assets/creator.png';
 

@@ -40,7 +40,7 @@
 
 ## 🚀 NPM <a name="live-demo"></a>
 
-- [Home Link](https://www.npmjs.com/package/@meta-market/mint-ui)
+- [Home Link](https://www.npmjs.com/package/@meta-market-org/mint-ui)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,13 +55,13 @@ Install this project with:
 Example command:
 
 ```sh
-  npm i @meta-market/mint-ui
+  npm i @meta-market-org/mint-ui
 ```
 
 ### Usage
 
 ```javascript
-import { Text } from '@meta-market/mint-ui';
+import { Text } from '@meta-market-org/mint-ui';
 
 export default function App() {
 	return (

@@ -11,8 +11,8 @@ import {
 	TimerTitle,
 	TimerUnit,
 	TimerValue,
-} from '@meta-market/mint-ui';
-import { Globe } from '@meta-market/mint-icons';
+} from '@meta-market-org/mint-ui';
+import { Globe } from '@meta-market-org/mint-icons';
 
 import Creator from '../../assets/creator.png';
 

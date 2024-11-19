@@ -13,8 +13,8 @@ import {
 	CardContent,
 	CardImage,
 	Image,
-} from '@meta-market/mint-ui';
-import { Eye } from '@meta-market/mint-icons';
+} from '@meta-market-org/mint-ui';
+import { Eye } from '@meta-market-org/mint-icons';
 
 import Avatar1 from '../../assets/avatar1.png';
 import Avatar2 from '../../assets/avatar2.png';

@@ -9,7 +9,7 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "@meta-market/mint-ui",
-    "utils": "@meta-market/mint-ui"
+    "components": "@meta-market-org/mint-ui",
+    "utils": "@meta-market-org/mint-ui"
   }
 }

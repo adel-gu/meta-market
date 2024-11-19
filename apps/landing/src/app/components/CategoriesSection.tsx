@@ -12,7 +12,7 @@ import {
 	AspectRatio,
 	CardContent,
 	CardImage,
-} from '@meta-market/mint-ui';
+} from '@meta-market-org/mint-ui';
 
 import {
 	PaintBrush,
@@ -23,7 +23,7 @@ import {
 	MagicWand,
 	Basketball,
 	Planet,
-} from '@meta-market/mint-icons';
+} from '@meta-market-org/mint-icons';
 
 import Cat1 from '../../assets/category1.png';
 import Cat2 from '../../assets/category2.png';
