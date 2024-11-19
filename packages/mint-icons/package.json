@@ -1,6 +1,6 @@
 {
   "name": "@meta-market-org/mint-icons",
-  "version": "1.0.2",
+  "version": "1.0.3-0",
   "exports": {
     ".": {
       "import": "./index.mjs",
