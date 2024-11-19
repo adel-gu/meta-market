@@ -23,6 +23,7 @@
   "main": "./index.cjs.js",
   "module": "./index.esm.js",
   "types": "./src/index.d.ts",
+  "style": "./base.css",
   "files": [
     "./*"
   ],
