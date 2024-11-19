@@ -18,7 +18,8 @@
       "types": "./src/index.d.ts",
       "import": "./index.esm.js",
       "require": "./index.cjs.js"
-    }
+    },
+    "./base.css": "./base.css"
   },
   "main": "./index.cjs.js",
   "module": "./index.esm.js",
