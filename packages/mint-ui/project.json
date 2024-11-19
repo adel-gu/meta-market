@@ -8,6 +8,11 @@
   "targets": {
     "add-component": {
       "executor": "@nx-extend/shadcn-ui:add"
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/packages/{projectName}"
+      }
     }
   }
 }
