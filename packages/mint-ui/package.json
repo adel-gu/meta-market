@@ -1,6 +1,6 @@
 {
   "name": "@meta-market/mint-ui",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "React component and the design system package for meta market application",
   "homepage": "https://github.com/adel-gu/meta-market/tree/main/packages/mint-ui#readme",
   "bugs": {
